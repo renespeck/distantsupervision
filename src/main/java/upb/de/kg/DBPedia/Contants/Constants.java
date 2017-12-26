@@ -5,8 +5,24 @@ import java.util.List;
 
 public class Constants {
 
-    public static List<String> DBPediaLabels = Arrays.asList("dbo:birthplace", "dbo:deathplace",
-            "dbo:capital", "dbo:owner", "dbo:developer", "dbo:primeMinister", "dbo:spouse");
+    public static List<String> DBPediaLabels = Arrays.asList(
+            "dbo:spouse",
+            "dbo:child",
+            "dbo:parent",
+            "dbo:mother",
+            "dbo:employer",
+            "dbo:ceo",
+            "dbo:chairperson",
+            "dbo:president",
+            "dbo:affiliation",
+            "dbo:childOrganisation",
+            "dbo:deathPlace",
+            "dbo:birthPlace",
+            "dbo:livingPlace",
+            "dbo:announcedFrom",
+            "dbo:governingBody"
+
+    );
 }
 
 

@@ -19,4 +19,8 @@ public class Domain {
 
     }
 
+    @Override
+    public String toString() {
+        return domain;
+    }
 }

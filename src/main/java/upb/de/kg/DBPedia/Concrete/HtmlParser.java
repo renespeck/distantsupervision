@@ -14,7 +14,7 @@ public class HtmlParser implements Parser {
         url = urlValue;
     }
 
-    public Document Parse() throws IOException {
+    public Document parse() throws IOException {
         return Jsoup.connect(url).get();
     }
 }
