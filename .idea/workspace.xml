@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04f4baf1-07ac-45c3-a27c-f8d515b2dfd0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upd/de/kg/DBPedia/Concrete/DBPediaFetcher.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upd/de/kg/DBPedia/Concrete/HtmlParser.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upd/de/kg/DBPedia/Contants/Constants.class" afterPath="" />
@@ -20,6 +19,8 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upd/de/kg/Extractor/Concrete/WikipediaExtractor.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upd/de/kg/Extractor/Interface/Extractor.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/kg/upb/de/AppTest.class" afterPath="$PROJECT_DIR$/target/test-classes/kg/upb/de/AppTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -127,8 +128,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+            <state relative-caret-position="63">
+              <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -440,12 +441,12 @@
       <workItem from="1513447426920" duration="38645000" />
       <workItem from="1513868135185" duration="15077000" />
       <workItem from="1514067200085" duration="24962000" />
-      <workItem from="1514246521292" duration="417000" />
+      <workItem from="1514246521292" duration="611000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91488000" />
+    <option name="totallyTimeSpent" value="91682000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -948,8 +949,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        <state relative-caret-position="63">
+          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
           <folding />
         </state>
       </provider>
