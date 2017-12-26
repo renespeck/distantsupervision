@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04f4baf1-07ac-45c3-a27c-f8d515b2dfd0" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/.gitignore" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upd/de/kg/DBPedia/Concrete/DBPediaFetcher.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upd/de/kg/DBPedia/Concrete/HtmlParser.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upd/de/kg/DBPedia/Contants/Constants.class" afterPath="" />
@@ -21,7 +20,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upd/de/kg/Extractor/Concrete/WikipediaExtractor.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upd/de/kg/Extractor/Interface/Extractor.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/kg/upb/de/AppTest.class" afterPath="$PROJECT_DIR$/target/test-classes/kg/upb/de/AppTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -114,7 +112,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WikipediaExtractor.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WikipediaExtractor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/Extractor/Concrete/WikipediaExtractor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="231">
@@ -122,6 +120,16 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -260,124 +268,6 @@
             <path>
               <item name="DistantSupervision" type="b2602c69:ProjectViewProjectNode" />
               <item name="DistantSupervision" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DistantSupervision" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DistantSupervision" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DistantSupervision" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DistantSupervision" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DistantSupervision" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DistantSupervision" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DistantSupervision" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DistantSupervision" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kg" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DistantSupervision" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DistantSupervision" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kg" type="462c0819:PsiDirectoryNode" />
-              <item name="DataAccessLayer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DistantSupervision" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DistantSupervision" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kg" type="462c0819:PsiDirectoryNode" />
-              <item name="DataModel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DistantSupervision" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DistantSupervision" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kg" type="462c0819:PsiDirectoryNode" />
-              <item name="DBPedia" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DistantSupervision" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DistantSupervision" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kg" type="462c0819:PsiDirectoryNode" />
-              <item name="DBPedia" type="462c0819:PsiDirectoryNode" />
-              <item name="Contants" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DistantSupervision" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DistantSupervision" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kg" type="462c0819:PsiDirectoryNode" />
-              <item name="Extractor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DistantSupervision" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DistantSupervision" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kg" type="462c0819:PsiDirectoryNode" />
-              <item name="Extractor" type="462c0819:PsiDirectoryNode" />
-              <item name="Concrete" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DistantSupervision" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DistantSupervision" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kg" type="462c0819:PsiDirectoryNode" />
-              <item name="Extractor" type="462c0819:PsiDirectoryNode" />
-              <item name="Interface" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DistantSupervision" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DistantSupervision" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kg" type="462c0819:PsiDirectoryNode" />
-              <item name="Logger" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DistantSupervision" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DistantSupervision" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kg" type="462c0819:PsiDirectoryNode" />
-              <item name="Logger" type="462c0819:PsiDirectoryNode" />
-              <item name="Logger.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="DistantSupervision" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DistantSupervision" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DistantSupervision" type="b2602c69:ProjectViewProjectNode" />
@@ -550,12 +440,12 @@
       <workItem from="1513447426920" duration="38645000" />
       <workItem from="1513868135185" duration="15077000" />
       <workItem from="1514067200085" duration="24962000" />
-      <workItem from="1514246521292" duration="279000" />
+      <workItem from="1514246521292" duration="417000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91350000" />
+    <option name="totallyTimeSpent" value="91488000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1046,14 +936,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/Extractor/Concrete/WikipediaExtractor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -1061,6 +943,14 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
