@@ -32,3 +32,4 @@ target/classes/upb/de/kg/Extractor/
 target/classes/upb/de/kg/Logger/
 target/generated-sources/
 target/generated-test-sources/
+target/test-classes/
