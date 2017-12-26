@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04f4baf1-07ac-45c3-a27c-f8d515b2dfd0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_belerweb_mongo_java_orm_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_ST4_4_0_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr_3_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr_runtime_3_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_stringtemplate_3_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20171018.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongo_java_driver_2_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/upb/de/kg/DataAccessLayer/DataBaseOperations.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/JsonModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/upb/de/kg/Logger/Logger.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/.gitignore" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upd/de/kg/DBPedia/Concrete/DBPediaFetcher.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upd/de/kg/DBPedia/Concrete/HtmlParser.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upd/de/kg/DBPedia/Contants/Constants.class" afterPath="" />
@@ -33,25 +20,8 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upd/de/kg/DataModel/Sentence.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upd/de/kg/Extractor/Concrete/WikipediaExtractor.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upd/de/kg/Extractor/Interface/Extractor.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/upb/de/kg/App.class" afterPath="$PROJECT_DIR$/target/classes/upb/de/kg/App.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/kg/upb/de/AppTest.class" afterPath="$PROJECT_DIR$/target/test-classes/kg/upb/de/AppTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DistantSupervision.iml" afterPath="$PROJECT_DIR$/DistantSupervision.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/upb/de/kg/App.java" afterPath="$PROJECT_DIR$/src/main/java/upb/de/kg/App.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/upb/de/kg/DBPedia/Concrete/DBPediaFetcher.java" afterPath="$PROJECT_DIR$/src/main/java/upb/de/kg/DBPedia/Concrete/DBPediaFetcher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/upb/de/kg/DBPedia/Concrete/HtmlParser.java" afterPath="$PROJECT_DIR$/src/main/java/upb/de/kg/DBPedia/Concrete/HtmlParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/upb/de/kg/DBPedia/Contants/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/upb/de/kg/DBPedia/Contants/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/upb/de/kg/DBPedia/Interfaces/IDataFetcher.java" afterPath="$PROJECT_DIR$/src/main/java/upb/de/kg/DBPedia/Interfaces/IDataFetcher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/upb/de/kg/DBPedia/Interfaces/Parser.java" afterPath="$PROJECT_DIR$/src/main/java/upb/de/kg/DBPedia/Interfaces/Parser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Domain.java" afterPath="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Domain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Range.java" afterPath="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Range.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Relation.java" afterPath="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Relation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Resource.java" afterPath="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Resource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/ResourcePair.java" afterPath="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/ResourcePair.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/upb/de/kg/Extractor/Concrete/WikipediaExtractor.java" afterPath="$PROJECT_DIR$/src/main/java/upb/de/kg/Extractor/Concrete/WikipediaExtractor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/upb/de/kg/Extractor/Interface/Extractor.java" afterPath="$PROJECT_DIR$/src/main/java/upb/de/kg/Extractor/Interface/Extractor.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -144,7 +114,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WikipediaExtractor.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WikipediaExtractor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/Extractor/Concrete/WikipediaExtractor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="231">
@@ -152,26 +122,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/target/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -212,7 +162,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/upd/de/kg/DBPedia/Relation.java" />
         <option value="$PROJECT_DIR$/src/main/java/upd/de/kg/DBPedia/Resource.java" />
         <option value="$PROJECT_DIR$/src/main/java/upd/de/kg/DBPedia/ResoucePair.java" />
         <option value="$PROJECT_DIR$/src/main/java/upd/de/kg/DBPedia/Sentence.java" />
@@ -263,6 +212,7 @@
         <option value="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/ResourcePair.java" />
         <option value="$PROJECT_DIR$/src/main/java/upb/de/kg/Extractor/Interface/Extractor.java" />
         <option value="$PROJECT_DIR$/src/main/java/upb/de/kg/Extractor/Concrete/WikipediaExtractor.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -428,11 +378,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DistantSupervision" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DistantSupervision" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DistantSupervision" type="b2602c69:ProjectViewProjectNode" />
@@ -605,12 +550,12 @@
       <workItem from="1513447426920" duration="38645000" />
       <workItem from="1513868135185" duration="15077000" />
       <workItem from="1514067200085" duration="24962000" />
-      <workItem from="1514246521292" duration="72000" />
+      <workItem from="1514246521292" duration="279000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91143000" />
+    <option name="totallyTimeSpent" value="91350000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1093,16 +1038,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/Extractor/Concrete/WikipediaExtractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/target/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1113,9 +1048,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/Extractor/Concrete/WikipediaExtractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
