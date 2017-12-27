@@ -5,6 +5,7 @@ import org.apache.jena.rdf.model.Literal;
 import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.sparql.engine.http.QueryEngineHTTP;
+import upb.de.kg.Configuration.Config;
 import upb.de.kg.DBPedia.Interfaces.IDataFetcher;
 import upb.de.kg.DataModel.Domain;
 import upb.de.kg.DataModel.Range;
@@ -21,6 +22,7 @@ public class DBPediaFetcher implements IDataFetcher {
     private static final int LIMIT = 10;
     private static final String OntologyPREFIX = "PREFIX dbo: <http://dbpedia.org/ontology/> ";
     private static final String RDFSPREFIX = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> ";
+    private static final String RDFPREFIX = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ";
 
     /// Execute Query on the DBPedia Source
     private ResultSet executeQuery(String exeQuery) {
@@ -73,14 +75,16 @@ public class DBPediaFetcher implements IDataFetcher {
         //String rangeQuery = String.format("%s%s SELECT ?source ?target WHERE {?source dbo:spouse ?target} LIMIT %d", RDFSPREFIX, OntologyPREFIX, LIMIT);
 
         Logger.info("Query -----------------------------------");
-        String labelQuery = String.format("%s%s SELECT ?x ?xlabel ?y ?ylabel " +
+        String labelQuery = String.format("%s%s%s SELECT ?x ?xlabel ?y ?ylabel " +
                         "WHERE {?x %s ?y." +
                         "?x rdfs:label ?xlabel." +
                         "?y rdfs:label ?ylabel. " +
+                        "?x rdf:type <%s>. " +
+                        "?y rdf:type <%s>. " +
                         "FILTER (langMatches( lang(?xlabel), \"en\" ) ) " +
                         "FILTER (langMatches( lang(?ylabel), \"en\" ) )}" +
-                        "LIMIT 10"
-                , RDFSPREFIX, OntologyPREFIX, relation.toString());
+                        "LIMIT %s"
+                , RDFSPREFIX, OntologyPREFIX, RDFPREFIX, relation.toString(), relation.getDomain(), relation.getRange(), Config.LabelsLimit);
 
 
         Logger.info(labelQuery);
@@ -102,8 +106,8 @@ public class DBPediaFetcher implements IDataFetcher {
             Logger.info("ResourceSource:" + srcLabel);
             Logger.info("ResourceTarget:" + trgLabel);
 
-            upb.de.kg.DataModel.Resource resSrc = new upb.de.kg.DataModel.Resource(resourceSrc.toString(), relation, srcLabel.toString());
-            upb.de.kg.DataModel.Resource trgSrc = new upb.de.kg.DataModel.Resource(resourceSrc.toString(), relation, trgLabel.toString());
+            upb.de.kg.DataModel.Resource resSrc = new upb.de.kg.DataModel.Resource(resourceSrc.toString(), srcLabel.toString(), relation.getDomain().toString());
+            upb.de.kg.DataModel.Resource trgSrc = new upb.de.kg.DataModel.Resource(resourceTarget.toString(), trgLabel.toString(), relation.getRange().toString());
 
             ResourcePair resourcePair = new ResourcePair(resSrc, trgSrc, relation);
             resourceList.add(resourcePair);

@@ -5,17 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04f4baf1-07ac-45c3-a27c-f8d515b2dfd0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/upb/de/kg/Extractor/Concrete/Processor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/upb/de/kg/App.class" afterPath="$PROJECT_DIR$/target/classes/upb/de/kg/App.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/upb/de/kg/App.java" afterPath="$PROJECT_DIR$/src/main/java/upb/de/kg/App.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/upb/de/kg/Configuration/Config.java" afterPath="$PROJECT_DIR$/src/main/java/upb/de/kg/Configuration/Config.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/upb/de/kg/DBPedia/Concrete/DBPediaFetcher.java" afterPath="$PROJECT_DIR$/src/main/java/upb/de/kg/DBPedia/Concrete/DBPediaFetcher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/upb/de/kg/DBPedia/Contants/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/upb/de/kg/DBPedia/Contants/Constants.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/upb/de/kg/DataAccessLayer/DataBaseOperations.java" afterPath="$PROJECT_DIR$/src/main/java/upb/de/kg/DataAccessLayer/DataBaseOperations.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Domain.java" afterPath="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Domain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/JsonModel.java" afterPath="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/JsonModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Range.java" afterPath="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Range.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Relation.java" afterPath="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Relation.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Resource.java" afterPath="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Resource.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/ResourcePair.java" afterPath="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/ResourcePair.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/upb/de/kg/Extractor/Concrete/Processor.java" afterPath="$PROJECT_DIR$/src/main/java/upb/de/kg/Extractor/Concrete/Processor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/upb/de/kg/Extractor/Concrete/WikipediaExtractor.java" afterPath="$PROJECT_DIR$/src/main/java/upb/de/kg/Extractor/Concrete/WikipediaExtractor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/upb/de/kg/Extractor/Interface/Extractor.java" afterPath="$PROJECT_DIR$/src/main/java/upb/de/kg/Extractor/Interface/Extractor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/upb/de/kg/Logger/Logger.java" afterPath="$PROJECT_DIR$/src/main/java/upb/de/kg/Logger/Logger.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,27 +32,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/App.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#insertDatabase#0;class#App#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Relation.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Relation.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Relation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-              <folding>
-                <element signature="e#1027#1028#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="462">
+              <caret line="48" column="67" lean-forward="false" selection-start-line="48" selection-start-column="67" selection-end-line="48" selection-end-column="67" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -56,42 +45,87 @@
       <file leaf-file-name="ResourcePair.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/ResourcePair.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="23" />
-              <folding>
-                <element signature="e#609#610#0" expanded="true" />
-                <element signature="e#643#644#0" expanded="true" />
-                <element signature="e#686#687#0" expanded="true" />
-                <element signature="e#720#721#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Sentence.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Sentence.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+            <state relative-caret-position="483">
+              <caret line="23" column="50" lean-forward="false" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Resource.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/DBPedia/Contants/Constants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataBaseOperations.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/DataAccessLayer/DataBaseOperations.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="744">
+              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Config.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/Configuration/Config.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="19" column="43" lean-forward="true" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Resource.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Resource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="65">
-              <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+            <state relative-caret-position="441">
+              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
               <folding>
-                <element signature="e#781#782#0" expanded="true" />
-                <element signature="e#812#813#0" expanded="true" />
-                <element signature="e#850#851#0" expanded="true" />
-                <element signature="e#882#883#0" expanded="true" />
-                <element signature="e#915#916#0" expanded="true" />
-                <element signature="e#944#945#0" expanded="true" />
-                <element signature="e#975#976#0" expanded="true" />
-                <element signature="e#1003#1004#0" expanded="true" />
+                <element signature="e#541#542#0" expanded="true" />
+                <element signature="e#575#576#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JsonModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/JsonModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="634">
+              <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WikipediaExtractor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/Extractor/Concrete/WikipediaExtractor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="695">
+              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Processor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/Extractor/Concrete/Processor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="334">
+              <caret line="52" column="82" lean-forward="true" selection-start-line="52" selection-start-column="82" selection-end-line="52" selection-end-column="82" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -100,57 +134,13 @@
       <file leaf-file-name="DBPediaFetcher.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/DBPedia/Concrete/DBPediaFetcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+            <state relative-caret-position="5">
+              <caret line="82" column="38" lean-forward="false" selection-start-line="82" selection-start-column="38" selection-end-line="82" selection-end-column="38" />
               <folding>
-                <element signature="e#1535#1543#0" expanded="true" />
-                <element signature="e#3624#3638#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LiteralImpl.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/jena/jena-core/3.5.0/jena-core-3.5.0-sources.jar!/org/apache/jena/rdf/model/impl/LiteralImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-              <folding>
-                <element signature="e#2803#2804#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResourceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/jena/jena-core/3.5.0/jena-core-3.5.0-sources.jar!/org/apache/jena/rdf/model/impl/ResourceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="161" column="9" lean-forward="false" selection-start-line="161" selection-start-column="9" selection-end-line="161" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Logger.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/Logger/Logger.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QueryFactory.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/jena/jena-arq/3.5.0/jena-arq-3.5.0-sources.jar!/org/apache/jena/query/QueryFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-              <folding>
-                <element signature="e#1520#1521#0" expanded="true" />
-                <element signature="e#1826#1827#0" expanded="true" />
-                <element signature="e#1883#1884#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1680#1688#0" expanded="true" />
+                <element signature="method#getRangeList#0;class#DBPediaFetcher#0" expanded="false" />
+                <element signature="e#3939#3953#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -228,23 +218,23 @@
         <option value="$PROJECT_DIR$/src/main/java/upb/de/kg/Logger/Interface/Logger.java" />
         <option value="$PROJECT_DIR$/src/main/java/upb/de/kg/Logger/Concrete/Logger.java" />
         <option value="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/DataBaseOperations.java" />
-        <option value="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/JsonModel.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/upb/de/kg/Logger/Logger.java" />
         <option value="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Domain.java" />
         <option value="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Range.java" />
-        <option value="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Relation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/upb/de/kg/App.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/java/upb/de/kg/DBPedia/Contants/Constants.java" />
-        <option value="$PROJECT_DIR$/src/main/java/upb/de/kg/DataAccessLayer/DataBaseOperations.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/upb/de/kg/Extractor/Interface/Extractor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/ResourcePair.java" />
         <option value="$PROJECT_DIR$/src/main/java/upb/de/kg/Extractor/Concrete/WikipediaExtractor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/upb/de/kg/Extractor/Concrete/Processor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/upb/de/kg/Logger/Logger.java" />
-        <option value="$PROJECT_DIR$/src/main/java/upb/de/kg/Configuration/Config.java" />
+        <option value="$PROJECT_DIR$/src/main/java/upb/de/kg/DataAccessLayer/DataBaseOperations.java" />
         <option value="$PROJECT_DIR$/src/main/java/upb/de/kg/DBPedia/Concrete/DBPediaFetcher.java" />
+        <option value="$PROJECT_DIR$/src/main/java/upb/de/kg/Configuration/Config.java" />
+        <option value="$PROJECT_DIR$/src/main/java/upb/de/kg/DBPedia/Contants/Constants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/upb/de/kg/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Resource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/JsonModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/ResourcePair.java" />
+        <option value="$PROJECT_DIR$/src/main/java/upb/de/kg/Extractor/Concrete/Processor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Relation.java" />
       </list>
     </option>
   </component>
@@ -354,6 +344,26 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="kg" type="462c0819:PsiDirectoryNode" />
               <item name="DBPedia" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DistantSupervision" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DistantSupervision" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="kg" type="462c0819:PsiDirectoryNode" />
+              <item name="DBPedia" type="462c0819:PsiDirectoryNode" />
+              <item name="Concrete" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DistantSupervision" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DistantSupervision" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="kg" type="462c0819:PsiDirectoryNode" />
+              <item name="DBPedia" type="462c0819:PsiDirectoryNode" />
+              <item name="Contants" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DistantSupervision" type="b2602c69:ProjectViewProjectNode" />
@@ -558,12 +568,12 @@
       <workItem from="1513447426920" duration="38645000" />
       <workItem from="1513868135185" duration="15077000" />
       <workItem from="1514067200085" duration="24962000" />
-      <workItem from="1514246521292" duration="26267000" />
+      <workItem from="1514246521292" duration="44602000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117338000" />
+    <option name="totallyTimeSpent" value="135673000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -580,15 +590,15 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868525" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37330317" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37250996" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868525" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27658433" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -597,7 +607,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3515936" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3515936" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -630,50 +640,62 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/upb/de/kg/DBPedia/Concrete/DBPediaFetcher.java</url>
-          <line>36</line>
+          <line>38</line>
           <properties />
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/upb/de/kg/DBPedia/Concrete/DBPediaFetcher.java</url>
-          <line>93</line>
-          <properties />
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/upb/de/kg/DataAccessLayer/DataBaseOperations.java</url>
-          <line>31</line>
+          <line>37</line>
           <properties />
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/upb/de/kg/DataAccessLayer/DataBaseOperations.java</url>
-          <line>26</line>
+          <line>32</line>
           <properties />
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/ResourcePair.java</url>
-          <line>9</line>
+          <url>file://$PROJECT_DIR$/src/main/java/upb/de/kg/Extractor/Concrete/WikipediaExtractor.java</url>
+          <line>32</line>
           <properties />
-          <option name="timeStamp" value="32" />
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/upb/de/kg/App.java</url>
+          <line>66</line>
+          <properties />
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/upb/de/kg/Extractor/Concrete/Processor.java</url>
+          <line>67</line>
+          <properties />
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/upb/de/kg/App.java</url>
+          <line>55</line>
+          <properties />
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/upb/de/kg/DBPedia/Concrete/DBPediaFetcher.java</url>
+          <line>76</line>
+          <properties />
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="33" />
+      <option name="time" value="41" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="labelQuery" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/DBPedia/Concrete/HtmlParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="18" column="1" lean-forward="false" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/DBPedia/Interfaces/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -687,7 +709,6 @@
           <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#insertDatabase#0;class#App#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -704,9 +725,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -723,7 +742,6 @@
           <caret line="19" column="38" lean-forward="true" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#insertDatabase#0;class#App#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -765,16 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/DBPedia/Concrete/HtmlParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -802,17 +810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mongodb/mongodb-driver/3.6.0/mongodb-driver-3.6.0-sources.jar!/com/mongodb/MongoClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-226">
-          <caret line="283" column="12" lean-forward="false" selection-start-line="283" selection-start-column="10" selection-end-line="283" selection-end-column="12" />
-          <folding>
-            <element signature="e#6761#6762#0" expanded="false" />
-            <element signature="e#6812#6813#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/mongodb/mongodb-driver/3.6.0/mongodb-driver-3.6.0-sources.jar!/com/mongodb/client/MongoDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
@@ -825,32 +822,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Domain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="24" selection-end-column="5" />
-          <folding>
-            <element signature="e#365#366#0" expanded="true" />
-            <element signature="e#394#395#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Range.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-          <folding>
-            <element signature="e#114#115#0" expanded="false" />
-            <element signature="e#148#149#0" expanded="false" />
-            <element signature="e#246#247#0" expanded="false" />
-            <element signature="e#295#296#0" expanded="false" />
-            <element signature="e#341#342#0" expanded="false" />
-            <element signature="e#369#370#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -901,126 +872,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/DBPedia/Contants/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="16" column="30" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="676">
           <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/Extractor/Interface/Extractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/Extractor/Concrete/WikipediaExtractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#784#785#0" expanded="true" />
-            <element signature="e#819#820#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/JsonModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="103" column="5" lean-forward="true" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/DataAccessLayer/DataBaseOperations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="613">
-          <caret line="34" column="49" lean-forward="false" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/Extractor/Concrete/Processor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="54" column="22" lean-forward="false" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/Configuration/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="57" lean-forward="true" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Sentence.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/ResourcePair.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="23" />
-          <folding>
-            <element signature="e#609#610#0" expanded="true" />
-            <element signature="e#643#644#0" expanded="true" />
-            <element signature="e#686#687#0" expanded="true" />
-            <element signature="e#720#721#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/jena/jena-arq/3.5.0/jena-arq-3.5.0-sources.jar!/org/apache/jena/query/QueryFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="e#1520#1521#0" expanded="true" />
-            <element signature="e#1826#1827#0" expanded="true" />
-            <element signature="e#1883#1884#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/Logger/Logger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Relation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding>
-            <element signature="e#1027#1028#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1037,47 +893,190 @@
         <state relative-caret-position="187">
           <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
           <folding>
-            <element signature="e#2803#2804#0" expanded="true" />
+            <element signature="e#2803#2804#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Domain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Range.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+          <folding>
+            <element signature="e#369#370#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/jena/jena-arq/3.5.0/jena-arq-3.5.0-sources.jar!/org/apache/jena/query/QueryFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <element signature="e#1520#1521#0" expanded="false" />
+            <element signature="e#1826#1827#0" expanded="false" />
+            <element signature="e#1883#1884#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/jena/jena-shaded-guava/3.5.0/jena-shaded-guava-3.5.0-sources.jar!/org/apache/jena/ext/com/google/common/collect/Lists.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="700" column="0" lean-forward="false" selection-start-line="700" selection-start-column="0" selection-end-line="700" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mongodb/mongodb-driver/3.6.0/mongodb-driver-3.6.0-sources.jar!/com/mongodb/MongoClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="98" column="0" lean-forward="true" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Sentence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/Logger/Logger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/Extractor/Interface/Extractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/DBPedia/Concrete/HtmlParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+        <state relative-caret-position="86">
+          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#insertDatabase#0;class#App#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/DBPedia/Concrete/DBPediaFetcher.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/Extractor/Concrete/WikipediaExtractor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+        <state relative-caret-position="695">
+          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding>
-            <element signature="e#1535#1543#0" expanded="true" />
-            <element signature="e#3624#3638#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Resource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+        <state relative-caret-position="441">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
-            <element signature="e#781#782#0" expanded="true" />
-            <element signature="e#812#813#0" expanded="true" />
-            <element signature="e#850#851#0" expanded="true" />
-            <element signature="e#882#883#0" expanded="true" />
-            <element signature="e#915#916#0" expanded="true" />
-            <element signature="e#944#945#0" expanded="true" />
-            <element signature="e#975#976#0" expanded="true" />
-            <element signature="e#1003#1004#0" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+            <element signature="e#575#576#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/JsonModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="634">
+          <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/DBPedia/Concrete/DBPediaFetcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5">
+          <caret line="82" column="38" lean-forward="false" selection-start-line="82" selection-start-column="38" selection-end-line="82" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1680#1688#0" expanded="true" />
+            <element signature="method#getRangeList#0;class#DBPediaFetcher#0" expanded="false" />
+            <element signature="e#3939#3953#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/ResourcePair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="23" column="50" lean-forward="false" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/Extractor/Concrete/Processor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="52" column="82" lean-forward="true" selection-start-line="52" selection-start-column="82" selection-end-line="52" selection-end-column="82" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/DBPedia/Contants/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/DataAccessLayer/DataBaseOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/Configuration/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="43" lean-forward="true" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/upb/de/kg/DataModel/Relation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="48" column="67" lean-forward="false" selection-start-line="48" selection-start-column="67" selection-end-line="48" selection-end-column="67" />
+          <folding />
         </state>
       </provider>
     </entry>

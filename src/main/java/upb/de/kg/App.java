@@ -10,6 +10,8 @@ import upb.de.kg.DataAccessLayer.DataBaseOperations;
 import upb.de.kg.DataModel.JsonModel;
 import upb.de.kg.DataModel.Relation;
 import upb.de.kg.DataModel.ResourcePair;
+import upb.de.kg.Extractor.Concrete.WikipediaExtractor;
+import upb.de.kg.Extractor.Interface.Extractor;
 import upb.de.kg.Logger.Logger;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -24,7 +26,7 @@ public class App {
 
     }
 
-    public static void insertDatabase() {
+    public static void insertDatabase() throws IOException {
         for (int i = 0; i < 2; i++) {
 
             JsonModel jsonModel = new JsonModel();
@@ -37,7 +39,11 @@ public class App {
             jsonModel.setTargetPosition(28);
 
 
-            DataBaseOperations.Insert(jsonModel);
+            try {
+                DataBaseOperations.Insert(jsonModel);
+            } catch (Exception e) {
+                Logger.error(e.toString());
+            }
         }
     }
 
@@ -51,12 +57,15 @@ public class App {
             Relation relation = new Relation(label);
             relation.addDomainList(dataFetcher.getDomainList(relation));
             relation.addRangeList(dataFetcher.getRangeList(relation));
+
             //relation.printDetails();
 
             List<ResourcePair> resourcePairList = dataFetcher.getResourcePair(relation);
 
             for (ResourcePair pair : resourcePairList
                     ) {
+                Extractor extractor = new WikipediaExtractor(pair);
+                extractor.processData();
                 pair.printDetails();
             }
         }

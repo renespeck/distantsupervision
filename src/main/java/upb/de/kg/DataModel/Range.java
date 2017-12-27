@@ -7,12 +7,12 @@ public class Range {
         range = rangeValue;
     }
 
-    public String GetValue() {
+    public String getValue() {
         return range;
     }
 
     public boolean equals(Range r) {
-        return range.equals(r.GetValue());
+        return range.equals(r.getValue());
     }
 
     @Override

@@ -24,14 +24,14 @@ public class Relation {
     public void printAllDomainList() {
         System.out.println("Domain List:");
         for (Domain d : domainList) {
-            System.out.println(d.GetValue());
+            System.out.println(d.getValue());
         }
     }
 
     public void printAllRangeList() {
         System.out.println("Range List:");
         for (Range r : rangeList) {
-            System.out.println(r.GetValue());
+            System.out.println(r.getValue());
         }
     }
 
@@ -45,6 +45,8 @@ public class Relation {
     public String toString() {
         return relation;
     }
+
+    public String getRelationLabel() {return relation.replace("dbo:","");}
 
     public Domain getDomain() {
         return domainList.get(0);

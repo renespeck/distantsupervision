@@ -13,14 +13,17 @@ import java.text.BreakIterator;
 import java.util.List;
 import java.util.Locale;
 
+import static upb.de.kg.Logger.Logger.error;
+import static upb.de.kg.Logger.Logger.info;
+
 public class Processor extends Thread {
 
     private ResourcePair resourcePair;
-    private List<String> directoryList;
+    private List<File> directoryList;
     private int fileCounter;
     private int sentencesFound;
 
-    public Processor(ResourcePair pair, List<String> subList) {
+    public Processor(ResourcePair pair, List<File> subList) {
 
         directoryList = subList;
         resourcePair = pair;
@@ -28,7 +31,7 @@ public class Processor extends Thread {
         sentencesFound = 0;
     }
 
-    private void processFile(String fileName) throws IOException {
+    private void processFile(String fileName) throws Exception {
         BufferedReader br = null;
 
         br = new BufferedReader(new FileReader(fileName));
@@ -51,11 +54,19 @@ public class Processor extends Thread {
                         && sentence.contains(resourcePair.getTargetResource().getTrimedLabel())) {
 
                     JsonModel model = new JsonModel();
+                    model.setPredicate(resourcePair.getRelation().getRelationLabel());
                     model.setSource(resourcePair.getSourceResource().getTrimedLabel());
-                    //model.setSourceLabel(resourcePair.getSourceResource().);
+                    model.setSourceLabel(resourcePair.getSourceResource().getClassLabel());
+                    model.setSourcePosition(sentence.indexOf(resourcePair.getSourceResource().getTrimedLabel()));
                     model.setSentence(sentence);
+                    model.setTarget(resourcePair.getTargetResource().getTrimedLabel());
+                    model.setTargetLabel(resourcePair.getTargetResource().getClassLabel());
+                    model.setTargetPosition(sentence.indexOf(resourcePair.getTargetResource().getTrimedLabel()));
 
                     sentencesFound++;
+
+                    DataBaseOperations.Insert(model);
+                    System.out.println(sentence);
 
                     if (sentencesFound == Config.SentenceLimit) {
                         break;
@@ -66,14 +77,13 @@ public class Processor extends Thread {
         }
     }
 
-    private void processDirectory(String directory) throws IOException {
+    private void processDirectory(File directory) throws Exception {
 
-        File file = new File(directory);
-        String[] fileList = file.list();
+        File[] fileList = directory.listFiles();
 
-        for (int i = 0; i < fileList.length; i++) {
+        for (File file : fileList) {
 
-            processFile(fileList[i]);
+            processFile(file.getCanonicalPath());
             fileCounter++;
 
             if ((sentencesFound == Config.SentenceLimit) || (fileCounter == Config.FileLimit)) {
@@ -84,15 +94,19 @@ public class Processor extends Thread {
 
     public void run() {
 
-        for (String folder : directoryList
+        for (File folder : directoryList
                 ) {
             try {
+                info("Processing folder: " + folder);
                 processDirectory(folder);
 
-            } catch (IOException e) {
-                e.printStackTrace();
+            } catch (Exception e) {
+                try {
+                    error(e.toString());
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
             }
         }
-
     }
 }

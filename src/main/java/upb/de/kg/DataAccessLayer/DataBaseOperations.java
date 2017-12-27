@@ -7,6 +7,10 @@ import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 import upb.de.kg.Configuration.Config;
 import upb.de.kg.DataModel.JsonModel;
+import upb.de.kg.Extractor.Interface.Extractor;
+import upb.de.kg.Logger.Logger;
+
+import java.io.IOException;
 
 public class DataBaseOperations {
     private static final String dataBaseServerUrl = "localhost";
@@ -23,16 +27,24 @@ public class DataBaseOperations {
         return database;
     }
 
-    public static void Insert(JsonModel model) {
-        MongoDatabase database = createDataBaseConnection();
+    public static void Insert(JsonModel model) throws Exception {
 
-        MongoCollection<Document> collection = database.getCollection(Config.COLLECTION_NAME);
+        try {
+            MongoDatabase database = createDataBaseConnection();
+
+            MongoCollection<Document> collection = database.getCollection(Config.COLLECTION_NAME);
 
 
-        Gson gson = new Gson();
-        String json = gson.toJson(model);
+            Gson gson = new Gson();
+            String json = gson.toJson(model);
 
-        Document document = Document.parse(json);
-        collection.insertOne(document);
+            Document document = Document.parse(json);
+            collection.insertOne(document);
+        }
+        catch (Exception ex)
+        {
+            Logger.error(ex.toString());
+            throw ex;
+        }
     }
 }

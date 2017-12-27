@@ -8,14 +8,14 @@ public class Domain {
         domain = domainValue;
     }
 
-    public String GetValue ()
+    public String getValue ()
     {
         return domain;
     }
 
     public boolean equals(Domain d)
     {
-        return domain.equals(d.GetValue());
+        return domain.equals(d.getValue());
 
     }
 

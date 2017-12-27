@@ -4,25 +4,21 @@ public class Resource {
 
     private String resource;
     private String label;
-    String trimLabel;
-    private Relation relation;
-    private Domain domain;
-    private Range range;
+    private String trimLabel;
+    private String rdfsClass;
+    private String entityLabel;
 
-    public Resource(String resoruceValue, Domain domainVal, Range rangeVal, Relation relationVal) {
-        resource = resoruceValue;
-        domain = domainVal;
-        range = rangeVal;
-        relation = relationVal;
+
+    public Resource(String resoruce, String label, String rdfsClass) {
+        this.resource = resoruce;
+        this.label = label;
         trimLabel = label.replace("@en", "");
+        this.rdfsClass = rdfsClass;
+        this.entityLabel = rdfsClass.replace("http://dbpedia.org/ontology/","");
     }
 
-    public Resource(String resoruceVal, Relation relationVal, String labelVal) {
-        resource = resoruceVal;
-        relation = relationVal;
-        label = labelVal;
-        domain = relationVal.getDomain();
-        range = relationVal.getRange();
+    public String getClassLabel() {
+        return entityLabel;
     }
 
     public String getResource() {
@@ -33,19 +29,12 @@ public class Resource {
         return trimLabel;
     }
 
-    public Domain getDomain() {
-        return domain;
-    }
-
-    public Range getRange() {
-        return range;
-    }
 
     public void printResource() {
-        System.out.println("Resource: " + resource.toString());
-        System.out.println("Relation: " + relation.toString());
-        System.out.println("Domain: " + domain.toString());
-        System.out.println("Range: " + range.toString());
+        System.out.println("Resource: " + resource);
+        System.out.println("Label: " + trimLabel);
+        System.out.println("Class: " + rdfsClass);
+        System.out.println("Entity: " + entityLabel);
     }
 
 

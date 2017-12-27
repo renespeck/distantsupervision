@@ -1,9 +1,9 @@
 package upb.de.kg.DataModel;
 
-import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.UUID;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -22,6 +22,8 @@ public class JsonModel {
 
     @JsonProperty("_id")
     private UUID _id;
+    @JsonProperty("Predicate")
+    private String predicate;
     @JsonProperty("Source")
     private String source;
     @JsonProperty("SourceLabel")
@@ -32,16 +34,24 @@ public class JsonModel {
     private String sentence;
     @JsonProperty("Sentence Portion")
     private String sentencePortion;
-    @JsonProperty("Target Value")
-    private String targetValue;
+    @JsonProperty("Target")
+    private String target;
     @JsonProperty("Target Label")
     private String targetLabel;
     @JsonProperty("Target Position")
     private Integer targetPosition;
 
-    public JsonModel (){
+    public JsonModel() {
         _id = UUID.randomUUID();
     }
+
+    @JsonProperty("Predicate")
+    public String getPredicate() {
+        return predicate;
+    }
+
+    @JsonProperty("Predicate")
+    public void setPredicate(String predicate) { this.predicate = predicate; }
 
     @JsonProperty("Source")
     public String getSource() {
@@ -93,14 +103,14 @@ public class JsonModel {
         this.sentencePortion = sentencePortion;
     }
 
-    @JsonProperty("Target Value")
+    @JsonProperty("Target")
     public String getTargetValue() {
-        return targetValue;
+        return target;
     }
 
-    @JsonProperty("Target Value")
-    public void setTargetValue(String targetValue) {
-        this.targetValue = targetValue;
+    @JsonProperty("Target")
+    public void setTarget(String target) {
+        this.target = target;
     }
 
     @JsonProperty("Target Label")
@@ -122,7 +132,6 @@ public class JsonModel {
     public void setTargetPosition(Integer targetPosition) {
         this.targetPosition = targetPosition;
     }
-
 
 
 }
