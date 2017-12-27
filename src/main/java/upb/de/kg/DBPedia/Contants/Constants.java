@@ -17,6 +17,7 @@ public class Constants {
             "dbo:affiliation",
             "dbo:childOrganisation",
             "dbo:deathPlace",
+            "dbo:residence",
             "dbo:birthPlace",
             "dbo:livingPlace",
             "dbo:announcedFrom",

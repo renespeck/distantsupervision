@@ -1,5 +1,7 @@
 package upb.de.kg.Logger;
 
+import upb.de.kg.Configuration.Config;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -25,7 +27,7 @@ public class Logger {
     }
 
     private static void intializeLogger() throws IOException {
-        logFile = new File("D:\\Distant_Supervision\\Logs\\DistantSupervision.Log");
+        logFile = new File(Config.LOG_PATH);
         logFile.createNewFile();
 
         info("Logger Initialized");

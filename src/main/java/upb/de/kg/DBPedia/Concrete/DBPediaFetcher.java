@@ -99,8 +99,8 @@ public class DBPediaFetcher implements IDataFetcher {
             Literal trgLabel = soln.getLiteral("ylabel");
 
             Logger.info(Integer.toString(count) + "-----------------------------------");
-            Logger.info("ResouseSource:" + srcLabel);
-            Logger.info("ResouseTarget:" + trgLabel);
+            Logger.info("ResourceSource:" + srcLabel);
+            Logger.info("ResourceTarget:" + trgLabel);
 
             upb.de.kg.DataModel.Resource resSrc = new upb.de.kg.DataModel.Resource(resourceSrc.toString(), relation, srcLabel.toString());
             upb.de.kg.DataModel.Resource trgSrc = new upb.de.kg.DataModel.Resource(resourceSrc.toString(), relation, trgLabel.toString());

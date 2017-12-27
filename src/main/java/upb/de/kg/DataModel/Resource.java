@@ -4,6 +4,7 @@ public class Resource {
 
     private String resource;
     private String label;
+    String trimLabel;
     private Relation relation;
     private Domain domain;
     private Range range;
@@ -13,6 +14,7 @@ public class Resource {
         domain = domainVal;
         range = rangeVal;
         relation = relationVal;
+        trimLabel = label.replace("@en", "");
     }
 
     public Resource(String resoruceVal, Relation relationVal, String labelVal) {
@@ -23,12 +25,27 @@ public class Resource {
         range = relationVal.getRange();
     }
 
+    public String getResource() {
+        return resource;
+    }
+
+    public String getTrimedLabel() {
+        return trimLabel;
+    }
+
+    public Domain getDomain() {
+        return domain;
+    }
+
+    public Range getRange() {
+        return range;
+    }
+
     public void printResource() {
         System.out.println("Resource: " + resource.toString());
         System.out.println("Relation: " + relation.toString());
         System.out.println("Domain: " + domain.toString());
         System.out.println("Range: " + range.toString());
-
     }
 
 

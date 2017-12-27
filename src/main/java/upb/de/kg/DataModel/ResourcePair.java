@@ -21,5 +21,11 @@ public class ResourcePair {
         resourceTrg.printResource();
     }
 
+    public Resource getSourceResource() {
+        return resourceSrc;
+    }
 
+    public Resource getTargetResource() {
+        return resourceTrg;
+    }
 }

@@ -25,11 +25,7 @@ hs_err_pid*
 
 .gitignore
 .idea/inspectionProfiles/
-target/classes/upb/de/kg/DBPedia/
-target/classes/upb/de/kg/DataAccessLayer/
-target/classes/upb/de/kg/DataModel/
-target/classes/upb/de/kg/Extractor/
-target/classes/upb/de/kg/Logger/
-target/generated-sources/
-target/generated-test-sources/
-target/test-classes/
+/target/generated-sources/
+/target/test-classes/
+/target/generated-test-sources/
+/target/classes/

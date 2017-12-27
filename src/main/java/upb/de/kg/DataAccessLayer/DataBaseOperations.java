@@ -1,13 +1,11 @@
 package upb.de.kg.DataAccessLayer;
 
 import com.google.gson.Gson;
-import com.mongodb.DBCollection;
-import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import org.apache.jena.atlas.json.JSON;
 import org.bson.Document;
+import upb.de.kg.Configuration.Config;
 import upb.de.kg.DataModel.JsonModel;
 
 public class DataBaseOperations {
@@ -16,11 +14,11 @@ public class DataBaseOperations {
 
     private static MongoDatabase createDataBaseConnection() {
         // Creating a Mongo Client
-        MongoClient mongo = new MongoClient("localhost", 27017);
+        MongoClient mongo = new MongoClient(Config.SERVER_NAME, Config.PORT);
 
         //Creating Credentials
         //MongoCredential credential = MongoCredential.createCredential("","DistantSupervision", null);
-        MongoDatabase database = mongo.getDatabase("DistantSupervision");
+        MongoDatabase database = mongo.getDatabase(Config.DATABASENAME);
 
         return database;
     }
@@ -28,7 +26,7 @@ public class DataBaseOperations {
     public static void Insert(JsonModel model) {
         MongoDatabase database = createDataBaseConnection();
 
-        MongoCollection<Document> collection = database.getCollection("Items");
+        MongoCollection<Document> collection = database.getCollection(Config.COLLECTION_NAME);
 
 
         Gson gson = new Gson();
