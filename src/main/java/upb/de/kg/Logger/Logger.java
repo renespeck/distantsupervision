@@ -16,7 +16,7 @@ enum Level {
 public class Logger {
 
     private static File logFile;
-    private static boolean CONSOLEOUTPUT = true;
+    private static boolean CONSOLEOUTPUT = false;
 
     static {
         try {

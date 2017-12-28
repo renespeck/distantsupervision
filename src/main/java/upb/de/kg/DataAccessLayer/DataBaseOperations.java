@@ -7,42 +7,32 @@ import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 import upb.de.kg.Configuration.Config;
 import upb.de.kg.DataModel.JsonModel;
-import upb.de.kg.Extractor.Interface.Extractor;
 import upb.de.kg.Logger.Logger;
 
-import java.io.IOException;
-
 public class DataBaseOperations {
-    private static final String dataBaseServerUrl = "localhost";
-    private static final int port = 27017;
 
-    private static MongoDatabase createDataBaseConnection() {
-        // Creating a Mongo Client
-        MongoClient mongo = new MongoClient(Config.SERVER_NAME, Config.PORT);
+    private MongoDatabase dataBase;
 
-        //Creating Credentials
-        //MongoCredential credential = MongoCredential.createCredential("","DistantSupervision", null);
-        MongoDatabase database = mongo.getDatabase(Config.DATABASENAME);
-
-        return database;
+    private MongoDatabase getDataBaseConnection() {
+        if (dataBase == null) {
+            MongoClient mongo = new MongoClient(Config.SERVER_NAME, Config.PORT);
+            dataBase = mongo.getDatabase(Config.DATABASENAME);
+        }
+        return dataBase;
     }
 
-    public static void Insert(JsonModel model) throws Exception {
-
+    public void Insert(JsonModel model) throws Exception {
         try {
-            MongoDatabase database = createDataBaseConnection();
+            MongoDatabase database = getDataBaseConnection();
 
             MongoCollection<Document> collection = database.getCollection(Config.COLLECTION_NAME);
-
 
             Gson gson = new Gson();
             String json = gson.toJson(model);
 
             Document document = Document.parse(json);
             collection.insertOne(document);
-        }
-        catch (Exception ex)
-        {
+        } catch (Exception ex) {
             Logger.error(ex.toString());
             throw ex;
         }

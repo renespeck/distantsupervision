@@ -8,13 +8,19 @@ import upb.de.kg.Logger.Logger;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 public class WikipediaExtractor implements Extractor {
 
 
-    private ResourcePair resourcePair;
+    private List<ResourcePair> resourcePairList;
+
 
     private List<File> getDirectoryList(String basePath) {
         File file = new File(basePath);
@@ -23,31 +29,33 @@ public class WikipediaExtractor implements Extractor {
         return Arrays.asList(directories);
     }
 
-    public WikipediaExtractor(ResourcePair pair) {
-        resourcePair = pair;
+    public WikipediaExtractor(List<ResourcePair> labelsList) {
+        resourcePairList = labelsList;
     }
 
 
     public void processData() {
 
         List<File> directoryList = getDirectoryList(Config.WIKIPEDIA_DUMP_PATH);
+        List<List<File>> subLists = Lists.partition(directoryList, Config.DirectoyThreadLimit);
 
-        int threadCount = Config.ParallelThread;
-
-        double directoryDist = Math.ceil((double) directoryList.size() / (double) threadCount);
-        int directoryDistrbution = threadCount;
-
-        List<List<File>> subLists = Lists.partition(directoryList, threadCount);
-
+        ExecutorService executorService = Executors.newFixedThreadPool(subLists.size());
+        List<Callable> processorList = new ArrayList<Callable>();
         try {
-            Logger.info("Total Partions for processing:" + Integer.toString(subLists.size()));
+            Logger.info("Total partions for processing:" + Integer.toString(subLists.size()));
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         for (int i = 0; i < subLists.size(); i++) {
-            Processor process = new Processor(resourcePair, subLists.get(i));
-            process.run();
+            executorService.submit(new DataProcessor(resourcePairList, subLists.get(i)));
+        }
+
+        try {
+            executorService.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS);
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
 
     }

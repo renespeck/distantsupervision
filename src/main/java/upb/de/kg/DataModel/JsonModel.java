@@ -9,6 +9,7 @@ import java.util.UUID;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
         "_id",
+        "Predicate",
         "Source",
         "SourceLabel",
         "Source Position",

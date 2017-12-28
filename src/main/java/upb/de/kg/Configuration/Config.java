@@ -3,7 +3,7 @@ package upb.de.kg.Configuration;
 public class Config {
 
     //Paths
-    public static final String WIKIPEDIA_DUMP_PATH = "D:\\Croups\\";
+    public static final String WIKIPEDIA_DUMP_PATH = "D:\\Croups";
     public static final String LOG_PATH = "D:\\Distant_Supervision\\Logs\\DistantSupervision.Log";
 
     // Database
@@ -13,11 +13,11 @@ public class Config {
     public static final String COLLECTION_NAME = "Items";
 
     //Threads
-    public static final int ParallelThread = 10;
+    public static final int DirectoyThreadLimit = 10;
 
     //
     public static final int SentenceLimit = 10;
-    public static final int FileLimit = 10;
+    public static final int FileLimit = 1500;
 
-    public static final String LabelsLimit = "20";
+    public static final String LabelsLimit = "30";
 }

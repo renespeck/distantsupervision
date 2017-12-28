@@ -46,13 +46,15 @@ public class Relation {
         return relation;
     }
 
-    public String getRelationLabel() {return relation.replace("dbo:","");}
+    public String getRelationLabel() {
+        return relation.replace("dbo:", "");
+    }
 
     public Domain getDomain() {
         return domainList.get(0);
     }
 
-    public Range getRange(){
+    public Range getRange() {
         return rangeList.get(0);
     }
 }

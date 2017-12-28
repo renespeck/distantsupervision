@@ -72,7 +72,6 @@ public class DBPediaFetcher implements IDataFetcher {
     }
 
     public List<ResourcePair> getResourcePair(Relation relation) throws IOException {
-        //String rangeQuery = String.format("%s%s SELECT ?source ?target WHERE {?source dbo:spouse ?target} LIMIT %d", RDFSPREFIX, OntologyPREFIX, LIMIT);
 
         Logger.info("Query -----------------------------------");
         String labelQuery = String.format("%s%s%s SELECT ?x ?xlabel ?y ?ylabel " +
