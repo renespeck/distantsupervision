@@ -2,6 +2,7 @@ package upb.de.kg.DataAccessLayer;
 
 import com.google.gson.Gson;
 import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
@@ -14,9 +15,21 @@ public class DataBaseOperations {
     private MongoDatabase dataBase;
 
     private MongoDatabase getDataBaseConnection() {
+
+
         if (dataBase == null) {
-            MongoClient mongo = new MongoClient(Config.SERVER_NAME, Config.PORT);
-            dataBase = mongo.getDatabase(Config.DATABASENAME);
+
+            if (Config.USERREMOTEDB) {
+                MongoClientURI uri = new MongoClientURI(Config.REMOTEURI);
+                MongoClient client = new MongoClient(uri);
+                dataBase = client.getDatabase(uri.getDatabase());
+            } else {
+                if (Config.SERVER_NAME.equals("localhost")) {
+                    MongoClient mongo = new MongoClient(Config.SERVER_NAME, Config.PORT);
+
+                    dataBase = mongo.getDatabase(Config.DATABASENAME);
+                }
+            }
         }
         return dataBase;
     }

@@ -16,7 +16,6 @@ enum Level {
 public class Logger {
 
     private static File logFile;
-    private static boolean CONSOLEOUTPUT = false;
 
     static {
         try {
@@ -51,7 +50,7 @@ public class Logger {
         bw.newLine();
         bw.close();
 
-        if (CONSOLEOUTPUT)
+        if (Config.CONSOLEOUTPUT)
             System.out.println(msg);
     }
 

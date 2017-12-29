@@ -34,7 +34,7 @@ public class WikipediaExtractor implements Extractor {
     }
 
 
-    public void processData() {
+    public void processData() throws IOException {
 
         List<File> directoryList = getDirectoryList(Config.WIKIPEDIA_DUMP_PATH);
         List<List<File>> subLists = Lists.partition(directoryList, Config.DirectoyThreadLimit);
@@ -48,9 +48,10 @@ public class WikipediaExtractor implements Extractor {
         }
 
         for (int i = 0; i < subLists.size(); i++) {
+            Logger.info("Thread:"+i+" Created");
             executorService.submit(new DataProcessor(resourcePairList, subLists.get(i)));
         }
-
+        executorService.shutdown();
         try {
             executorService.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS);
 

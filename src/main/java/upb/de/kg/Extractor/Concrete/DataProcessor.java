@@ -28,28 +28,27 @@ public class DataProcessor implements Runnable {
         //fileCounter = 0;
     }
 
-    private void processDirectory(File directory) throws Exception {
+    private String getSubSentence(String sentence, int srcIndex, int srcLength, int trgIndex, int trgLength) {
+        if (srcIndex == trgIndex)
+            return "";
 
-        File[] fileList = directory.listFiles();
-        {
-            for (File file : fileList) {
-
-                processFile(file.getCanonicalPath(), directory.getName());
-                fileCounter++;
-
-            }
-        }
+        if (srcIndex < trgIndex)
+            return sentence.substring(srcIndex + srcLength, trgIndex);
+        else
+            return sentence.substring(trgIndex + trgLength, srcIndex);
     }
 
     private void processSentence(String sentence, ResourcePair resourcePair) throws Exception {
+
+        int srcStartIndex = sentence.indexOf(resourcePair.getSourceResource().getTrimedLabel());
+        int trgStartIndex = sentence.indexOf(resourcePair.getTargetResource().getTrimedLabel());
         try {
 
             if (sentence.contains(resourcePair.getSourceResource().getTrimedLabel())
                     && sentence.contains(resourcePair.getTargetResource().getTrimedLabel())) {
 
                 JsonModel model = new JsonModel();
-                int srcStartIndex = sentence.indexOf(resourcePair.getSourceResource().getTrimedLabel());
-                int trgStartIndex = sentence.indexOf(resourcePair.getTargetResource().getTrimedLabel());
+
 
                 model.setPredicate(resourcePair.getRelation().getRelationLabel());
                 model.setSource(resourcePair.getSourceResource().getTrimedLabel());
@@ -62,7 +61,10 @@ public class DataProcessor implements Runnable {
                 model.setTargetLabel(resourcePair.getTargetResource().getClassLabel());
                 model.setTargetPosition(trgStartIndex);
 
-                String subSentence = sentence.substring(srcStartIndex+resourcePair.getSourceResource().getTrimedLabel().length(), trgStartIndex);
+                int srcLength = resourcePair.getSourceResource().getTrimedLabel().length();
+                int trgLength = resourcePair.getTargetResource().getTrimedLabel().length();
+
+                String subSentence = getSubSentence(sentence, srcStartIndex, srcLength, trgStartIndex, trgLength);
 
                 model.setSentencePortion(subSentence);
 
@@ -70,6 +72,9 @@ public class DataProcessor implements Runnable {
                 System.out.println(sentence);
             }
         } catch (Exception ex) {
+            Logger.info("Sentence:" + sentence);
+            Logger.info("StartIndex:" + srcStartIndex);
+            Logger.info("EndIndex:" + trgStartIndex);
             Logger.error(ex.toString());
         }
     }
@@ -107,6 +112,17 @@ public class DataProcessor implements Runnable {
         }
     }
 
+    private void processDirectory(File directory) throws Exception {
+
+        File[] fileList = directory.listFiles();
+        for (File file : fileList) {
+
+            processFile(file.getCanonicalPath(), directory.getName());
+            fileCounter++;
+        }
+        Logger.info(String.format("Folder:%s Processing Finished", directory.getName()));
+    }
+
     public void run() {
 
         for (File folder : directoryList
@@ -123,6 +139,11 @@ public class DataProcessor implements Runnable {
                     e1.printStackTrace();
                 }
             }
+        }
+        try {
+            Logger.info("List Processing Finished");
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
