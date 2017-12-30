@@ -8,8 +8,10 @@ import upb.de.kg.DataModel.ResourcePair;
 import java.io.IOException;
 import java.util.List;
 
-public interface IDataFetcher {
+public interface DataFetcher {
     List<Domain> getDomainList(Relation relation);
-    List<Range> getRangeList (Relation relation);
+
+    List<Range> getRangeList(Relation relation);
+
     List<ResourcePair> getResourcePair(Relation relation) throws IOException;
 }

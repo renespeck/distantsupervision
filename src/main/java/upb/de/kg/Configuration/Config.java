@@ -22,7 +22,7 @@ public class Config {
     //public static final int SentenceLimit = 10;
     //public static final int FileLimit = 1500;
 
-    public static final String LabelsLimit = "30";
+    public static final String LabelsLimit = "100";
 
     //Log
     public static final boolean CONSOLEOUTPUT = true;

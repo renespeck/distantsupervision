@@ -2,7 +2,7 @@ package upb.de.kg;
 
 import upb.de.kg.DBPedia.Concrete.DBPediaFetcher;
 import upb.de.kg.DBPedia.Contants.Constants;
-import upb.de.kg.DBPedia.Interfaces.IDataFetcher;
+import upb.de.kg.DBPedia.Interfaces.DataFetcher;
 import upb.de.kg.DataModel.Relation;
 import upb.de.kg.DataModel.ResourcePair;
 import upb.de.kg.Extractor.Concrete.WikipediaExtractor;
@@ -26,7 +26,7 @@ public class App {
 
     public static List<ResourcePair> traverseLinks() throws IOException {
         // FetchData from DBPedia Source
-        IDataFetcher dataFetcher = new DBPediaFetcher();
+        DataFetcher dataFetcher = new DBPediaFetcher();
         List<ResourcePair> resourcePairList = new ArrayList<ResourcePair>();
 
         for (String label : Constants.DBPediaLabels

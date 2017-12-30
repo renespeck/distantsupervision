@@ -48,7 +48,7 @@ public class WikipediaExtractor implements Extractor {
         }
 
         for (int i = 0; i < subLists.size(); i++) {
-            Logger.info("Thread:"+i+" Created");
+            Logger.info("Thread:" + i + " Created");
             executorService.submit(new DataProcessor(resourcePairList, subLists.get(i)));
         }
         executorService.shutdown();

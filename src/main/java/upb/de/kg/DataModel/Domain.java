@@ -3,18 +3,15 @@ package upb.de.kg.DataModel;
 public class Domain {
     private String domain;
 
-    public Domain (String domainValue)
-    {
+    public Domain(String domainValue) {
         domain = domainValue;
     }
 
-    public String getValue ()
-    {
+    public String getValue() {
         return domain;
     }
 
-    public boolean equals(Domain d)
-    {
+    public boolean equals(Domain d) {
         return domain.equals(d.getValue());
 
     }

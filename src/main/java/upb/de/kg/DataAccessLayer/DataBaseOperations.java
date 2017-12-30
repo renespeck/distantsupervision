@@ -24,11 +24,9 @@ public class DataBaseOperations {
                 MongoClient client = new MongoClient(uri);
                 dataBase = client.getDatabase(uri.getDatabase());
             } else {
-                if (Config.SERVER_NAME.equals("localhost")) {
-                    MongoClient mongo = new MongoClient(Config.SERVER_NAME, Config.PORT);
+                MongoClient mongo = new MongoClient(Config.SERVER_NAME, Config.PORT);
 
-                    dataBase = mongo.getDatabase(Config.DATABASENAME);
-                }
+                dataBase = mongo.getDatabase(Config.DATABASENAME);
             }
         }
         return dataBase;

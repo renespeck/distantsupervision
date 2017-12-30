@@ -52,7 +52,9 @@ public class JsonModel {
     }
 
     @JsonProperty("Predicate")
-    public void setPredicate(String predicate) { this.predicate = predicate; }
+    public void setPredicate(String predicate) {
+        this.predicate = predicate;
+    }
 
     @JsonProperty("Source")
     public String getSource() {

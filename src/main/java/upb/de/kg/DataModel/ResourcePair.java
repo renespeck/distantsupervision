@@ -21,7 +21,9 @@ public class ResourcePair {
         resourceTrg.printResource();
     }
 
-    public Relation getRelation(){return relation;}
+    public Relation getRelation() {
+        return relation;
+    }
 
     public Resource getSourceResource() {
         return resourceSrc;

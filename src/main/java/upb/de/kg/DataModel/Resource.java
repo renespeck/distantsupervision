@@ -14,7 +14,7 @@ public class Resource {
         this.label = label;
         trimLabel = label.replace("@en", "");
         this.rdfsClass = rdfsClass;
-        this.entityLabel = rdfsClass.replace("http://dbpedia.org/ontology/","");
+        this.entityLabel = rdfsClass.replace("http://dbpedia.org/ontology/", "");
     }
 
     public String getClassLabel() {

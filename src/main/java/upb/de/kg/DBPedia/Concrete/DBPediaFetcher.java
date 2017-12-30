@@ -6,7 +6,7 @@ import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.sparql.engine.http.QueryEngineHTTP;
 import upb.de.kg.Configuration.Config;
-import upb.de.kg.DBPedia.Interfaces.IDataFetcher;
+import upb.de.kg.DBPedia.Interfaces.DataFetcher;
 import upb.de.kg.DataModel.Domain;
 import upb.de.kg.DataModel.Range;
 import upb.de.kg.DataModel.Relation;
@@ -17,12 +17,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DBPediaFetcher implements IDataFetcher {
+public class DBPediaFetcher implements DataFetcher {
 
-    private static final int LIMIT = 10;
-    private static final String OntologyPREFIX = "PREFIX dbo: <http://dbpedia.org/ontology/> ";
-    private static final String RDFSPREFIX = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> ";
-    private static final String RDFPREFIX = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ";
+    private final int LIMIT = 10;
+    private final String OntologyPREFIX = "PREFIX dbo: <http://dbpedia.org/ontology/> ";
+    private final String RDFSPREFIX = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> ";
+    private final String RDFPREFIX = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ";
 
     /// Execute Query on the DBPedia Source
     private ResultSet executeQuery(String exeQuery) {
