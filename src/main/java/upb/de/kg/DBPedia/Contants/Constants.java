@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Constants {
 
-    public static List<String> DBPediaLabels = Arrays.asList(
+    public static List<String> DBPediaPredicates = Arrays.asList(
             "dbo:spouse",
             "dbo:child",
             "dbo:parent",

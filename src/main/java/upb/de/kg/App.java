@@ -29,7 +29,7 @@ public class App {
         DataFetcher dataFetcher = new DBPediaFetcher();
         List<ResourcePair> resourcePairList = new ArrayList<ResourcePair>();
 
-        for (String label : Constants.DBPediaLabels
+        for (String label : Constants.DBPediaPredicates
                 ) {
             Logger.info(String.format("Processing Label:%s ", label));
             Relation relation = new Relation(label);

@@ -12,6 +12,8 @@ import java.io.IOException;
 import java.text.BreakIterator;
 import java.util.List;
 import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class DataProcessor implements Runnable {
 
@@ -38,17 +40,24 @@ public class DataProcessor implements Runnable {
             return sentence.substring(trgIndex + trgLength, srcIndex);
     }
 
-    private void processSentence(String sentence, ResourcePair resourcePair) throws Exception {
+    private static boolean isContain(String source, String subItem) {
 
-        int srcStartIndex = sentence.indexOf(resourcePair.getSourceResource().getTrimedLabel());
-        int trgStartIndex = sentence.indexOf(resourcePair.getTargetResource().getTrimedLabel());
+        String pattern = "\\b" + subItem + "\\b";
+        Pattern p = Pattern.compile(pattern);
+        Matcher m = p.matcher(source);
+        return m.find();
+    }
+
+    private void processSentence(String sentence, ResourcePair resourcePair) throws Exception {
         try {
 
-            if (sentence.contains(resourcePair.getSourceResource().getTrimedLabel())
-                    && sentence.contains(resourcePair.getTargetResource().getTrimedLabel())) {
+            if (true == isContain(sentence, resourcePair.getSourceResource().getTrimedLabel())
+                    && true == isContain(sentence, resourcePair.getTargetResource().getTrimedLabel())) {
 
                 JsonModel model = new JsonModel();
 
+                int srcStartIndex = sentence.indexOf(resourcePair.getSourceResource().getTrimedLabel());
+                int trgStartIndex = sentence.indexOf(resourcePair.getTargetResource().getTrimedLabel());
 
                 model.setPredicate(resourcePair.getRelation().getRelationLabel());
                 model.setSource(resourcePair.getSourceResource().getTrimedLabel());
@@ -73,8 +82,6 @@ public class DataProcessor implements Runnable {
             }
         } catch (Exception ex) {
             Logger.info("Sentence:" + sentence);
-            Logger.info("StartIndex:" + srcStartIndex);
-            Logger.info("EndIndex:" + trgStartIndex);
             Logger.error(ex.toString());
         }
     }
