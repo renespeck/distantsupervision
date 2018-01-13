@@ -50,7 +50,7 @@ public class Logger {
         bw.newLine();
         bw.close();
 
-        if (Config.CONSOLEOUTPUT)
+        if (Config.CONSOLE_OUTPUT)
             System.out.println(msg);
     }
 

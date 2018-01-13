@@ -19,7 +19,6 @@ import java.util.List;
 
 public class DBPediaFetcher implements DataFetcher {
 
-    private final int LIMIT = 10;
     private final String OntologyPREFIX = "PREFIX dbo: <http://dbpedia.org/ontology/> ";
     private final String RDFSPREFIX = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> ";
     private final String RDFPREFIX = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ";
@@ -83,7 +82,7 @@ public class DBPediaFetcher implements DataFetcher {
                         "FILTER (langMatches( lang(?xlabel), \"en\" ) ) " +
                         "FILTER (langMatches( lang(?ylabel), \"en\" ) )}" +
                         "LIMIT %s"
-                , RDFSPREFIX, OntologyPREFIX, RDFPREFIX, relation.toString(), relation.getDomain(), relation.getRange(), Config.LabelsLimit);
+                , RDFSPREFIX, OntologyPREFIX, RDFPREFIX, relation.toString(), relation.getDomain(), relation.getRange(), Config.LABELS_LIMIT);
 
 
         Logger.info(labelQuery);

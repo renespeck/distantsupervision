@@ -18,9 +18,7 @@ import java.util.concurrent.TimeUnit;
 
 public class WikipediaExtractor implements Extractor {
 
-
     private List<ResourcePair> resourcePairList;
-
 
     private List<File> getDirectoryList(String basePath) {
         File file = new File(basePath);
@@ -33,14 +31,12 @@ public class WikipediaExtractor implements Extractor {
         resourcePairList = labelsList;
     }
 
-
     public void processData() throws IOException {
 
         List<File> directoryList = getDirectoryList(Config.WIKIPEDIA_DUMP_PATH);
-        List<List<File>> subLists = Lists.partition(directoryList, Config.DirectoyThreadLimit);
+        List<List<File>> subLists = Lists.partition(directoryList, Config.DIRECTORY_THREAD_LIMIT);
 
         ExecutorService executorService = Executors.newFixedThreadPool(subLists.size());
-        List<Callable> processorList = new ArrayList<Callable>();
         try {
             Logger.info("Total partions for processing:" + Integer.toString(subLists.size()));
         } catch (IOException e) {

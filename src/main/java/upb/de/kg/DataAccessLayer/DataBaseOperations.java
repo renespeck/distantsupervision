@@ -19,14 +19,14 @@ public class DataBaseOperations {
 
         if (dataBase == null) {
 
-            if (Config.USERREMOTEDB) {
-                MongoClientURI uri = new MongoClientURI(Config.REMOTEURI);
+            if (Config.USE_REMOTE_DB) {
+                MongoClientURI uri = new MongoClientURI(Config.REMOTE_URI);
                 MongoClient client = new MongoClient(uri);
                 dataBase = client.getDatabase(uri.getDatabase());
             } else {
                 MongoClient mongo = new MongoClient(Config.SERVER_NAME, Config.PORT);
 
-                dataBase = mongo.getDatabase(Config.DATABASENAME);
+                dataBase = mongo.getDatabase(Config.DATABASE_NAME);
             }
         }
         return dataBase;

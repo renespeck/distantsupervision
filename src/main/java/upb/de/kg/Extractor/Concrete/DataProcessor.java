@@ -40,7 +40,7 @@ public class DataProcessor implements Runnable {
             return sentence.substring(trgIndex + trgLength, srcIndex);
     }
 
-    private static boolean isContain(String source, String subItem) {
+    private boolean isContain(String source, String subItem) {
 
         String pattern = "\\b" + subItem + "\\b";
         Pattern p = Pattern.compile(pattern);
