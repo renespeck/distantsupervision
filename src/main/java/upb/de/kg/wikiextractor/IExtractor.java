@@ -1,4 +1,4 @@
-package upb.de.kg.Extractor;
+package upb.de.kg.wikiextractor;
 
 import java.io.IOException;
 

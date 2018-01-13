@@ -1,11 +1,9 @@
-package upb.de.kg.Extractor;
+package upb.de.kg.wikiextractor;
 
 import org.apache.jena.ext.com.google.common.collect.Lists;
-import upb.de.kg.Configuration.Config;
-import upb.de.kg.DataModel.ResourcePair;
-import upb.de.kg.Extractor.DataProcessor;
-import upb.de.kg.Extractor.IExtractor;
-import upb.de.kg.Logger.Logger;
+import upb.de.kg.configuration.Config;
+import upb.de.kg.datamodel.ResourcePair;
+import upb.de.kg.logger.Logger;
 
 import java.io.File;
 import java.io.IOException;

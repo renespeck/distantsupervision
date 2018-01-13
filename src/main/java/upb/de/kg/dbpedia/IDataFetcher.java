@@ -1,9 +1,9 @@
-package upb.de.kg.DBPedia;
+package upb.de.kg.dbpedia;
 
-import upb.de.kg.DataModel.Domain;
-import upb.de.kg.DataModel.Range;
-import upb.de.kg.DataModel.Relation;
-import upb.de.kg.DataModel.ResourcePair;
+import upb.de.kg.datamodel.Domain;
+import upb.de.kg.datamodel.Range;
+import upb.de.kg.datamodel.Relation;
+import upb.de.kg.datamodel.ResourcePair;
 
 import java.io.IOException;
 import java.util.List;

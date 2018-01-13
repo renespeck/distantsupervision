@@ -1,6 +1,6 @@
-package upb.de.kg.DataAccessLayer;
+package upb.de.kg.dataaccesslayer;
 
-import upb.de.kg.DataModel.JsonModel;
+import upb.de.kg.datamodel.JsonModel;
 
 public interface  IDataBaseOperations {
     void insert(JsonModel model) throws Exception;

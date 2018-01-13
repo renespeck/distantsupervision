@@ -1,20 +1,16 @@
-package upb.de.kg.DataAccessLayer;
+package upb.de.kg.dataaccesslayer;
 
 import com.google.gson.Gson;
-import com.mongodb.DBCursor;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
-import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
-import org.bson.BSON;
 import org.bson.Document;
 import org.bson.conversions.Bson;
-import upb.de.kg.Configuration.Config;
-import upb.de.kg.DataModel.JsonModel;
-import upb.de.kg.DataModel.Relation;
-import upb.de.kg.Logger.Logger;
+import upb.de.kg.configuration.Config;
+import upb.de.kg.datamodel.JsonModel;
+import upb.de.kg.logger.Logger;
 
 import java.util.ArrayList;
 import java.util.List;

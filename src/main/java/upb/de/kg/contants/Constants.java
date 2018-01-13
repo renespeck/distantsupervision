@@ -1,4 +1,4 @@
-package upb.de.kg.Contants;
+package upb.de.kg.contants;
 
 import java.util.Arrays;
 import java.util.List;

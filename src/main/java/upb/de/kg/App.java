@@ -1,15 +1,15 @@
 package upb.de.kg;
 
-import upb.de.kg.DBPedia.DBPediaFetcher;
-import upb.de.kg.Contants.Constants;
-import upb.de.kg.DBPedia.IDataFetcher;
-import upb.de.kg.DataAccessLayer.DataBaseOperations;
-import upb.de.kg.DataAccessLayer.IDataBaseOperations;
-import upb.de.kg.DataModel.Relation;
-import upb.de.kg.DataModel.ResourcePair;
-import upb.de.kg.Extractor.WikipediaExtractor;
-import upb.de.kg.Extractor.IExtractor;
-import upb.de.kg.Logger.Logger;
+import upb.de.kg.dbpedia.DBPediaFetcher;
+import upb.de.kg.contants.Constants;
+import upb.de.kg.dbpedia.IDataFetcher;
+import upb.de.kg.dataaccesslayer.DataBaseOperations;
+import upb.de.kg.dataaccesslayer.IDataBaseOperations;
+import upb.de.kg.datamodel.Relation;
+import upb.de.kg.datamodel.ResourcePair;
+import upb.de.kg.wikiextractor.WikipediaExtractor;
+import upb.de.kg.wikiextractor.IExtractor;
+import upb.de.kg.logger.Logger;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
@@ -29,7 +29,7 @@ public class App {
     }
 
     public static List<ResourcePair> fetchLabelsFromDBPedia() throws IOException {
-        // FetchData from DBPedia Source
+        // FetchData from dbpedia Source
         IDataFetcher dataFetcher = new DBPediaFetcher();
         List<ResourcePair> resourcePairList = new ArrayList<ResourcePair>();
 

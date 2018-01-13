@@ -1,17 +1,16 @@
-package upb.de.kg.DBPedia;
+package upb.de.kg.dbpedia;
 
 import org.apache.jena.query.*;
 import org.apache.jena.rdf.model.Literal;
 import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.sparql.engine.http.QueryEngineHTTP;
-import upb.de.kg.Configuration.Config;
-import upb.de.kg.DBPedia.IDataFetcher;
-import upb.de.kg.DataModel.Domain;
-import upb.de.kg.DataModel.Range;
-import upb.de.kg.DataModel.Relation;
-import upb.de.kg.DataModel.ResourcePair;
-import upb.de.kg.Logger.Logger;
+import upb.de.kg.configuration.Config;
+import upb.de.kg.datamodel.Domain;
+import upb.de.kg.datamodel.Range;
+import upb.de.kg.datamodel.Relation;
+import upb.de.kg.datamodel.ResourcePair;
+import upb.de.kg.logger.Logger;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -23,7 +22,7 @@ public class DBPediaFetcher implements IDataFetcher {
     private final String RDFSPREFIX = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> ";
     private final String RDFPREFIX = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ";
 
-    /// Execute Query on the DBPedia Source
+    /// Execute Query on the dbpedia Source
     private ResultSet executeQuery(String exeQuery) {
         Query query = QueryFactory.create(exeQuery);
         QueryExecution qexec = QueryExecutionFactory.sparqlService("http://dbpedia.org/sparql", query);
@@ -104,8 +103,8 @@ public class DBPediaFetcher implements IDataFetcher {
             Logger.info("ResourceSource:" + srcLabel);
             Logger.info("ResourceTarget:" + trgLabel);
 
-            upb.de.kg.DataModel.Resource resSrc = new upb.de.kg.DataModel.Resource(resourceSrc.toString(), srcLabel.toString(), relation.getDomain().toString());
-            upb.de.kg.DataModel.Resource trgSrc = new upb.de.kg.DataModel.Resource(resourceTarget.toString(), trgLabel.toString(), relation.getRange().toString());
+            upb.de.kg.datamodel.Resource resSrc = new upb.de.kg.datamodel.Resource(resourceSrc.toString(), srcLabel.toString(), relation.getDomain().toString());
+            upb.de.kg.datamodel.Resource trgSrc = new upb.de.kg.datamodel.Resource(resourceTarget.toString(), trgLabel.toString(), relation.getRange().toString());
 
             ResourcePair resourcePair = new ResourcePair(resSrc, trgSrc, relation);
             resourceList.add(resourcePair);

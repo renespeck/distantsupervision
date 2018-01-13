@@ -1,4 +1,4 @@
-package upb.de.kg.DataModel;
+package upb.de.kg.datamodel;
 
 import java.util.List;
 

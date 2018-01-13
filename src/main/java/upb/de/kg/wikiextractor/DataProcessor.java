@@ -1,9 +1,9 @@
-package upb.de.kg.Extractor;
+package upb.de.kg.wikiextractor;
 
-import upb.de.kg.DataAccessLayer.DataBaseOperations;
-import upb.de.kg.DataModel.JsonModel;
-import upb.de.kg.DataModel.ResourcePair;
-import upb.de.kg.Logger.Logger;
+import upb.de.kg.dataaccesslayer.DataBaseOperations;
+import upb.de.kg.datamodel.JsonModel;
+import upb.de.kg.datamodel.ResourcePair;
+import upb.de.kg.logger.Logger;
 
 import java.io.BufferedReader;
 import java.io.File;

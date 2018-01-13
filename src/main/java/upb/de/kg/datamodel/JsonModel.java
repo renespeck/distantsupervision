@@ -1,4 +1,4 @@
-package upb.de.kg.DataModel;
+package upb.de.kg.datamodel;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;

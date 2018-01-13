@@ -1,4 +1,4 @@
-package upb.de.kg.Configuration;
+package upb.de.kg.configuration;
 
 public class Config {
 

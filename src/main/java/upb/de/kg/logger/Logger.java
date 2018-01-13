@@ -1,6 +1,6 @@
-package upb.de.kg.Logger;
+package upb.de.kg.logger;
 
-import upb.de.kg.Configuration.Config;
+import upb.de.kg.configuration.Config;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -29,7 +29,7 @@ public class Logger {
         logFile = new File(Config.LOG_PATH);
         logFile.createNewFile();
 
-        info("Logger Initialized");
+        info("logger Initialized");
     }
 
     private static void writeonFile(Level level, String msg) throws IOException {
