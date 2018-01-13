@@ -22,9 +22,6 @@ public class Config {
     //Threads
     public static final int DIRECTORY_THREAD_LIMIT = 12;
 
-    //
-    //public static final int SentenceLimit = 10;
-    //public static final int FileLimit = 1500;
 
     public static final String LABELS_LIMIT = "100";
 

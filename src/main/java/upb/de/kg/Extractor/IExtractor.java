@@ -1,7 +1,7 @@
-package upb.de.kg.Extractor.Interface;
+package upb.de.kg.Extractor;
 
 import java.io.IOException;
 
-public interface Extractor {
+public interface IExtractor {
     public void processData() throws IOException;
 }

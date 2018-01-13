@@ -19,7 +19,7 @@ import upb.de.kg.Logger.Logger;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DataBaseOperations {
+public class DataBaseOperations implements IDataBaseOperations {
 
     private MongoDatabase dataBase;
 

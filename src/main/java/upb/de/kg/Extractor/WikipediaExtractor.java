@@ -1,22 +1,21 @@
-package upb.de.kg.Extractor.Concrete;
+package upb.de.kg.Extractor;
 
 import org.apache.jena.ext.com.google.common.collect.Lists;
 import upb.de.kg.Configuration.Config;
 import upb.de.kg.DataModel.ResourcePair;
-import upb.de.kg.Extractor.Interface.Extractor;
+import upb.de.kg.Extractor.DataProcessor;
+import upb.de.kg.Extractor.IExtractor;
 import upb.de.kg.Logger.Logger;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-public class WikipediaExtractor implements Extractor {
+public class WikipediaExtractor implements IExtractor {
 
     private List<ResourcePair> resourcePairList;
 

@@ -1,4 +1,4 @@
-package upb.de.kg.DBPedia.Concrete;
+package upb.de.kg.DBPedia;
 
 import org.apache.jena.query.*;
 import org.apache.jena.rdf.model.Literal;
@@ -6,7 +6,7 @@ import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.sparql.engine.http.QueryEngineHTTP;
 import upb.de.kg.Configuration.Config;
-import upb.de.kg.DBPedia.Interfaces.DataFetcher;
+import upb.de.kg.DBPedia.IDataFetcher;
 import upb.de.kg.DataModel.Domain;
 import upb.de.kg.DataModel.Range;
 import upb.de.kg.DataModel.Relation;
@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DBPediaFetcher implements DataFetcher {
+public class DBPediaFetcher implements IDataFetcher {
 
     private final String OntologyPREFIX = "PREFIX dbo: <http://dbpedia.org/ontology/> ";
     private final String RDFSPREFIX = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> ";

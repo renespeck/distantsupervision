@@ -1,4 +1,4 @@
-package upb.de.kg.Extractor.Concrete;
+package upb.de.kg.Extractor;
 
 import upb.de.kg.DataAccessLayer.DataBaseOperations;
 import upb.de.kg.DataModel.JsonModel;
@@ -15,7 +15,7 @@ import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class DataProcessor implements Runnable {
+ class DataProcessor implements Runnable {
 
     private List<ResourcePair> resourcePairList;
     private List<File> directoryList;

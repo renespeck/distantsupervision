@@ -1,4 +1,4 @@
-package upb.de.kg.DBPedia.Contants;
+package upb.de.kg.Contants;
 
 import java.util.Arrays;
 import java.util.List;

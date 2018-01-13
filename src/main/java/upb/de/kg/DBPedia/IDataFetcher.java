@@ -1,4 +1,4 @@
-package upb.de.kg.DBPedia.Interfaces;
+package upb.de.kg.DBPedia;
 
 import upb.de.kg.DataModel.Domain;
 import upb.de.kg.DataModel.Range;
@@ -8,7 +8,7 @@ import upb.de.kg.DataModel.ResourcePair;
 import java.io.IOException;
 import java.util.List;
 
-public interface DataFetcher {
+public interface IDataFetcher {
     List<Domain> getDomainList(Relation relation);
 
     List<Range> getRangeList(Relation relation);
