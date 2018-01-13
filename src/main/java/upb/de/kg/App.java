@@ -3,6 +3,7 @@ package upb.de.kg;
 import upb.de.kg.DBPedia.Concrete.DBPediaFetcher;
 import upb.de.kg.DBPedia.Contants.Constants;
 import upb.de.kg.DBPedia.Interfaces.DataFetcher;
+import upb.de.kg.DataAccessLayer.DataBaseOperations;
 import upb.de.kg.DataModel.Relation;
 import upb.de.kg.DataModel.ResourcePair;
 import upb.de.kg.Extractor.Concrete.WikipediaExtractor;
@@ -21,6 +22,9 @@ public class App {
         List<ResourcePair> resourcePairList = traverseLinks();
         Extractor extractor = new WikipediaExtractor(resourcePairList);
         extractor.processData();
+        createDataPartions();
+
+
 
     }
 
@@ -39,6 +43,20 @@ public class App {
             resourcePairList.addAll(dataFetcher.getResourcePair(relation));
         }
         return resourcePairList;
+    }
+
+    public static void createDataPartions() throws IOException {
+        for (String label : Constants.DBPediaPredicates
+                ){
+            DataBaseOperations dataBaseOperations = new DataBaseOperations();
+            String cleanLabel = label.replace("dbo:","");
+            dataBaseOperations.createDataPartitions (cleanLabel);
+        }
+    }
+
+    public static void copyDataFromRemoteToLocalDB() throws IOException{
+        DataBaseOperations dataBaseOperations = new DataBaseOperations();
+        dataBaseOperations.createLocalCopyofRemoteData();
     }
 
 }

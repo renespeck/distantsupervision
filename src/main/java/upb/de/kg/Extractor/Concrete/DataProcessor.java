@@ -77,7 +77,7 @@ public class DataProcessor implements Runnable {
 
                 model.setSentencePortion(subSentence);
 
-                dbBaseOperations.Insert(model);
+                dbBaseOperations.insert(model);
                 System.out.println(sentence);
             }
         } catch (Exception ex) {

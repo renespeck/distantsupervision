@@ -1,14 +1,23 @@
 package upb.de.kg.DataAccessLayer;
 
 import com.google.gson.Gson;
+import com.mongodb.DBCursor;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
+import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Filters;
+import org.bson.BSON;
 import org.bson.Document;
+import org.bson.conversions.Bson;
 import upb.de.kg.Configuration.Config;
 import upb.de.kg.DataModel.JsonModel;
+import upb.de.kg.DataModel.Relation;
 import upb.de.kg.Logger.Logger;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DataBaseOperations {
 
@@ -16,23 +25,29 @@ public class DataBaseOperations {
 
     private MongoDatabase getDataBaseConnection() {
 
-
         if (dataBase == null) {
 
             if (Config.USE_REMOTE_DB) {
-                MongoClientURI uri = new MongoClientURI(Config.REMOTE_URI);
-                MongoClient client = new MongoClient(uri);
-                dataBase = client.getDatabase(uri.getDatabase());
+                dataBase = getRemoteDataBaseConnection();
             } else {
-                MongoClient mongo = new MongoClient(Config.SERVER_NAME, Config.PORT);
-
-                dataBase = mongo.getDatabase(Config.DATABASE_NAME);
+                dataBase = getLocalDataBaseConnection();
             }
         }
         return dataBase;
     }
 
-    public void Insert(JsonModel model) throws Exception {
+    private MongoDatabase getLocalDataBaseConnection(){
+        MongoClient mongo = new MongoClient(Config.SERVER_NAME, Config.PORT);
+        return  mongo.getDatabase(Config.lOCAL_DATABASE_NAME);
+    }
+
+    private MongoDatabase getRemoteDataBaseConnection(){
+        MongoClientURI uri = new MongoClientURI(Config.REMOTE_URI);
+        MongoClient client = new MongoClient(uri);
+       return client.getDatabase(uri.getDatabase());
+    }
+
+    public void insert(JsonModel model) throws Exception {
         try {
             MongoDatabase database = getDataBaseConnection();
 
@@ -47,5 +62,42 @@ public class DataBaseOperations {
             Logger.error(ex.toString());
             throw ex;
         }
+    }
+
+    public void createDataPartitions(String relation) {
+        try {
+            MongoDatabase database = getDataBaseConnection();
+            MongoCollection<Document> collection = database.getCollection(Config.COLLECTION_NAME);
+            Bson filter = Filters.eq("predicate", relation);
+
+            List<Document> documentsList = collection.find(filter).into(new ArrayList<Document>());
+
+            int distribute = 0;
+            for (Document document :
+                    documentsList) {
+
+                if (distribute % 2 == 0) {
+                    MongoCollection<Document> trainingCollection = database.getCollection(Config.TRAINING_COLLECTION_NAME);
+                    trainingCollection.insertOne(document);
+                }
+                else{
+                    MongoCollection<Document> testCollection = database.getCollection(Config.TEST_COLLECTION_NAME);
+                    testCollection.insertOne(document);
+                }
+                distribute++;
+            }
+        }
+        catch (Exception ex) {
+        }
+    }
+
+    //Only Use this method when you need to copy remote data into local database
+    public void createLocalCopyofRemoteData ()
+    {
+    MongoCollection<Document> remoteCollection = getRemoteDataBaseConnection().getCollection("DataSet");
+    MongoCollection<Document> localCollection = getLocalDataBaseConnection().getCollection("DataSet");
+
+    List<Document> documentList = remoteCollection.find().into(new ArrayList<Document>());
+    localCollection.insertMany(documentList);
     }
 }

@@ -29,3 +29,6 @@ hs_err_pid*
 /target/test-classes/
 /target/generated-test-sources/
 /target/classes/
+/target/maven-status/
+/src/main/java/META-INF/MANIFEST.MF
+/.idea/artifacts/DistantSupervision_jar.xml
