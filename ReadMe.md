@@ -3,7 +3,7 @@ This is one part of the DSRE project. This project pulls data from the DBPedia a
 
 
 ## Getting Started
-In order to run this project simply do the git clone of this repository.
+In order to run this project make copy of this project and execute it through intelliJ.
 
 
 ### Prerequisites
@@ -12,4 +12,4 @@ If you are interested to store data locally then you need to setup MongoDB serve
 
 
 ### Configuration
-All configuration related to this project is defined inside Confgi.java file. Set relevant config variable in that file.
+All configuration related to this project is defined inside Config.java file. Set relevant config variable in that file.
