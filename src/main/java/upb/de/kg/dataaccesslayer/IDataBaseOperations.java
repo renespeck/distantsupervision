@@ -9,4 +9,6 @@ public interface  IDataBaseOperations {
 
     void createLocalCopyofRemoteData ();
 
+    void copyDataFromDifferentSources ();
+
 }

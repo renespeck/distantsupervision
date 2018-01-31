@@ -16,13 +16,17 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+This class contains all methods which are required to make query to DBPedia.
+*/
+
 public class DBPediaFetcher implements IDataFetcher {
 
     private final String OntologyPREFIX = "PREFIX dbo: <http://dbpedia.org/ontology/> ";
     private final String RDFSPREFIX = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> ";
     private final String RDFPREFIX = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ";
 
-    /// Execute Query on the dbpedia Source
+
     private ResultSet executeQuery(String exeQuery) {
         Query query = QueryFactory.create(exeQuery);
         QueryExecution qexec = QueryExecutionFactory.sparqlService("http://dbpedia.org/sparql", query);
@@ -33,6 +37,11 @@ public class DBPediaFetcher implements IDataFetcher {
         return rs;
     }
 
+    /**
+     * This method fetchs list of domains from DBpedia of give relation/predicate.
+     * @param relation
+     * @return
+     */
     public List<Domain> getDomainList(Relation relation) {
         String domainQuery = String.format("%s%s SELECT Distinct ?domain WHERE { %s rdfs:domain ?domain .}", RDFSPREFIX, OntologyPREFIX, relation.toString());
 
@@ -51,6 +60,11 @@ public class DBPediaFetcher implements IDataFetcher {
         return domainList;
     }
 
+    /**
+     * This method fetchs list of range from DBPedia of given relation/predicate.
+     * @param relation
+     * @return
+     */
     public List<Range> getRangeList(Relation relation) {
         String rangeQuery = String.format("%s%sSELECT Distinct ?range WHERE { %s rdfs:range ?range .}", RDFSPREFIX, OntologyPREFIX, relation.toString());
 
@@ -69,6 +83,12 @@ public class DBPediaFetcher implements IDataFetcher {
         return rangeList;
     }
 
+    /**
+     * This method returns ResourcePair of give predicate from DBPedia
+     * @param relation
+     * @return
+     * @throws IOException
+     */
     public List<ResourcePair> getResourcePair(Relation relation) throws IOException {
 
         Logger.info("Query -----------------------------------");

@@ -15,6 +15,9 @@ import upb.de.kg.logger.Logger;
 import java.util.ArrayList;
 import java.util.List;
 
+//This Class contains all method which are required to communicate with Mongo DB. Configuration related to Database is defined
+// in the Config.java file
+
 public class DataBaseOperations implements IDataBaseOperations {
 
     private MongoDatabase dataBase;
@@ -43,6 +46,19 @@ public class DataBaseOperations implements IDataBaseOperations {
        return client.getDatabase(uri.getDatabase());
     }
 
+
+    private MongoDatabase getRemoteDataBaseConnectionSecondary(){
+        MongoClientURI uri = new MongoClientURI("mongodb://admin:admin@ds113738.mlab.com:13738/relationextraction");
+        MongoClient client = new MongoClient(uri);
+        return client.getDatabase(uri.getDatabase());
+    }
+
+    /**
+     *This mehtod takes one model which contains relevant data to training data and insert into Mongo DB.
+     * @param model
+     * @throws Exception
+     */
+
     public void insert(JsonModel model) throws Exception {
         try {
             MongoDatabase database = getDataBaseConnection();
@@ -60,9 +76,14 @@ public class DataBaseOperations implements IDataBaseOperations {
         }
     }
 
+    /**
+     * This mehtod splits DataSet into two equal parts, One is training data and other is test data based on
+     * the give predicate.
+     * @param relation
+     */
     public void createDataPartitions(String relation) {
         try {
-            MongoDatabase database = getDataBaseConnection();
+            MongoDatabase database = getRemoteDataBaseConnectionSecondary();
             MongoCollection<Document> collection = database.getCollection(Config.COLLECTION_NAME);
             Bson filter = Filters.eq("predicate", relation);
 
@@ -95,5 +116,20 @@ public class DataBaseOperations implements IDataBaseOperations {
 
     List<Document> documentList = remoteCollection.find().into(new ArrayList<Document>());
     localCollection.insertMany(documentList);
+    }
+
+    public void copyDataFromDifferentSources ()
+    {
+    MongoCollection<Document> remoteSrcCollectionFirst = getRemoteDataBaseConnection().getCollection("DataSet");
+    MongoCollection<Document> remoteSrcCollectionSecond = getRemoteDataBaseConnection().getCollection("DataSet-SecondIteration");
+
+    MongoCollection<Document> targetedCollection = getRemoteDataBaseConnectionSecondary().getCollection("DataSet");
+
+
+    List<Document> documentListFirst = remoteSrcCollectionFirst.find().into(new ArrayList<Document>());
+    List<Document> documentListSecond = remoteSrcCollectionSecond.find().into(new ArrayList<Document>());
+
+    targetedCollection.insertMany(documentListFirst);
+    targetedCollection.insertMany(documentListSecond);
     }
 }

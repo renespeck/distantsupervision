@@ -16,6 +16,7 @@ import java.util.concurrent.TimeUnit;
 public class WikipediaExtractor implements IExtractor {
 
     private List<ResourcePair> resourcePairList;
+    private String wikipediaDumpPath;
 
     private List<File> getDirectoryList(String basePath) {
         File file = new File(basePath);
@@ -24,7 +25,8 @@ public class WikipediaExtractor implements IExtractor {
         return Arrays.asList(directories);
     }
 
-    public WikipediaExtractor(List<ResourcePair> labelsList) {
+    public WikipediaExtractor(List<ResourcePair> labelsList, String wikipediaPath) {
+        this.wikipediaDumpPath = wikipediaPath;
         resourcePairList = labelsList;
     }
 
